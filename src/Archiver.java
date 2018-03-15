@@ -1,47 +1,62 @@
+import java.io.File;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Archiver {
+
+	public static String readLine(){
+		Scanner sc = new Scanner(new File("input.txt"));
+		String s = sc.nextLine();
+		sc.close();
+		return s;
+	}
 	
-	static String S;
-	static Type1 arr;
-	static Vertex[] v;
-	static byte[][] table;
-	
-	public static Type1 stringToArraysQuantity() {
+	public static HashMap changeStrToArray(String s) {
+		HashMap arr = new HashMap();
+
 		return arr;
 	}
 	
-	public static Vertex[] arraysQuantityToTree() {
-		return v;
+	public static Vertex[] changeArrayToTree(HashMap hs) {
+		Vertex[] v = new Vertex[hs.size()];
+
+			return v;
 	}
 	
-	public static byte[][] treeToTable() {
+	public static byte[] changeTreeToTable(Vertex[] v) {
+		byte[] table = new byte[(v.length + 1) / 2];
+
 		return table;
 	}
 	
-	public static Boolean[] strToCode() {
+	public static ArrayList<Boolean[]> changeStrToCode(String s, bytes[] table) {
+		ArrayList<Boolean[]> code = new ArrayList<Boolean[]>();
+
 		return code;
 	}
 	
-	public static Boolean[] tableToCode() {
-		return codeS;
+	public static ArrayList<Boolean[]> tableToCode(bytes[] table) {
+		ArrayList<Boolean[]> code = new ArrayList<Boolean[]>();
+
+		return code;
 	}
 	
-	public static String codeToStr() {
+	public static String changeCodeToStr(ArrayList code1, ArrayList code2) {
+		String s /*= code1 + code2*/;
+
 		return str;
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		S = sc.nextLine();
-		sc.close();
-		stringToArraysQuantity();
-		arraysQuantityToTree();
-		treeToTable();
-		Boolean[] codeS = strToCode();
-		Boolean[] codeT = tableToCode();
+		String s = readLine();
+		HashMap hs = changeStrToArray();
+		Vertex[] v = changeArrayToTree(hs);
+		bytes[] table = changeTreeToTable(v);
+		ArrayList codeS = changeStrToCode(s, table);
+		ArrayList codeT = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
 		pw.print(codeToStr());
 		pw.close();
