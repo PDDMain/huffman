@@ -42,11 +42,11 @@ public class Archiver {
 		throw new NotImplementedException();
 	}
 
-	public static ArrayList<Boolean[]> convertTableToString(bytes[] table) {
+	public static ArrayList<Boolean[]> serializeTable(bytes[] table) {
 		throw new NotImplementedException();
 	}
 
-	public static String convertCodeToString(ArrayList code1, ArrayList code2) {
+	public static String convertCodeToString(ArrayList<Boolean[]> codeString, ArrayList<Boolean[]> codeTable) {
 		String result /* = code1 + code2 */;
 		return result;
 	}
@@ -56,8 +56,8 @@ public class Archiver {
 		HashMap<Character, boolean[]> frequencies = convertStrToFrequencies();
 		Tree tree = convertArrayToTree(frequencies);
 		HashMap<Character, boolean[]> table = convertTreeToTable(tree);
-		ArrayList codeString = convertStrToCode(input, table);
-		ArrayList codeTable = tableToCode(table);
+		ArrayList<Boolean[]> codeString = convertStrToCode(input, table);
+		ArrayList<Boolean[]> codeTable = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
 		pw.print(convertCodeToStr(codeString, codeTable));
 		pw.close();
