@@ -7,59 +7,59 @@ import java.util.Scanner;
 
 public class Archiver {
 
-	public static String readLine(){
+	public static class Tree()
+	{
+		Node[] nodes;
+
+		public static int getLeavesCount() {
+			throw new NotImplementedException();
+		}
+	}
+
+	public static class Node {
+	}
+
+	public static String readLine() {
 		Scanner sc = new Scanner(new File("input.txt"));
 		String s = sc.nextLine();
 		sc.close();
 		return s;
 	}
-	
-	public static HashMap changeStrToArray(String s) {
-		HashMap arr = new HashMap();
 
-		return arr;
+	public static HashMap<Character, Integer> convertStrToFrequencies(String s) { // в частоты встречаемости
+		throw new NotImplementedException();
 	}
-	
-	public static Vertex[] changeArrayToTree(HashMap hs) {
-		Vertex[] v = new Vertex[hs.size()];
 
-			return v;
+	public static Vertex[] convertArrayToTree(HashMap hs) {
+		throw new NotImplementedException();
 	}
-	
-	public static byte[] changeTreeToTable(Vertex[] v) {
-		byte[] table = new byte[(v.length + 1) / 2];
 
-		return table;
+	public static HashMap<Character, boolean[]> convertTreeToTable(Vertex[] v) {
+		throw new NotImplementedException();
 	}
-	
-	public static ArrayList<Boolean[]> changeStrToCode(String s, bytes[] table) {
-		ArrayList<Boolean[]> code = new ArrayList<Boolean[]>();
 
-		return code;
+	public static ArrayList<Boolean[]> compressString(String s, HashMap<Character, boolean[]> table) {
+		throw new NotImplementedException();
 	}
-	
-	public static ArrayList<Boolean[]> tableToCode(bytes[] table) {
-		ArrayList<Boolean[]> code = new ArrayList<Boolean[]>();
 
-		return code;
+	public static ArrayList<Boolean[]> convertTableToString(bytes[] table) {
+		throw new NotImplementedException();
 	}
-	
-	public static String changeCodeToStr(ArrayList code1, ArrayList code2) {
-		String s /*= code1 + code2*/;
 
-		return str;
+	public static String convertCodeToString(ArrayList code1, ArrayList code2) {
+		String result /* = code1 + code2 */;
+		return result;
 	}
 
 	public static void main(String[] args) {
-		String s = readLine();
-		HashMap hs = changeStrToArray();
-		Vertex[] v = changeArrayToTree(hs);
-		bytes[] table = changeTreeToTable(v);
-		ArrayList codeS = changeStrToCode(s, table);
-		ArrayList codeT = tableToCode(table);
+		String input = readLine();
+		HashMap<Character, boolean[]> frequencies = convertStrToFrequencies();
+		Tree tree = convertArrayToTree(frequencies);
+		HashMap<Character, boolean[]> table = convertTreeToTable(tree);
+		ArrayList codeString = convertStrToCode(input, table);
+		ArrayList codeTable = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
-		pw.print(codeToStr());
+		pw.print(convertCodeToStr(codeString, codeTable));
 		pw.close();
 	}
-
 }
