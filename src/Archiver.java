@@ -34,7 +34,7 @@ public class Archiver {
 		throw new NotImplementedException();
 	}
 
-	public static HashMap<Character, boolean[]> convertTreeToTable(Vertex[] v) {
+	public static HashMap<Character, boolean[]> convertTreeToTable(Tree v) {
 		throw new NotImplementedException();
 	}
 
