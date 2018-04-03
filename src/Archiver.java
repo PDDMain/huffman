@@ -49,7 +49,7 @@ public class Archiver {
 	public static ArrayList<Boolean[]> contactArrayList(ArrayList<Boolean[]> a, ArrayList<Boolean[]> b) {
 		throw new NotImplementedException();
 	}
-	
+
 	public static String convertCodeToString(ArrayList<Boolean[]> code) {
 		throw new NotImplementedException();
 	}
