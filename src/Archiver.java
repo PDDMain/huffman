@@ -1,50 +1,68 @@
+import java.io.File;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Archiver {
-	
-	static String S;
-	static Type1 arr;
-	static Vertex[] v;
-	static byte[][] table;
-	
-	public static Type1 stringToArraysQuantity() {
-		return arr;
+
+	public static class Tree()
+	{
+		Node[] nodes;
+
+		public static int getLeavesCount() {
+			throw new NotImplementedException();
+		}
 	}
-	
-	public static Vertex[] arraysQuantityToTree() {
-		return v;
+
+	public static class Node {
 	}
-	
-	public static byte[][] treeToTable() {
-		return table;
+
+	public static String readLine() {
+		Scanner sc = new Scanner(new File("input.txt"));
+		String s = sc.nextLine();
+		sc.close();
+		return s;
 	}
-	
-	public static Boolean[] strToCode() {
-		return code;
+
+	public static HashMap<Character, Integer> convertStringToFrequencies(String s) { // в частоты встречаемости
+		throw new NotImplementedException();
 	}
-	
-	public static Boolean[] tableToCode() {
-		return codeS;
+
+	public static Tree convertFrequenciesToTree(HashMap<Character, boolean[]> frequencies) {
+		throw new NotImplementedException();
 	}
-	
-	public static String codeToStr() {
-		return str;
+
+	public static HashMap<Character, boolean[]> convertTree(Tree v) {
+		throw new NotImplementedException();
+	}
+
+	public static ArrayList<Boolean[]> compressString(String s, HashMap<Character, boolean[]> table) {
+		throw new NotImplementedException();
+	}
+
+	public static ArrayList<Boolean[]> serializeTable(HashMap<Character, boolean[]>) {
+		throw new NotImplementedException();
+	}
+
+	public static ArrayList<Boolean[]> concatArrayList(ArrayList<Boolean[]> a, ArrayList<Boolean[]> b) {
+		throw new NotImplementedException();
+	}
+
+	public static String convertCodeToString(ArrayList<Boolean[]> code) {
+		throw new NotImplementedException();
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		S = sc.nextLine();
-		sc.close();
-		stringToArraysQuantity();
-		arraysQuantityToTree();
-		treeToTable();
-		Boolean[] codeS = strToCode();
-		Boolean[] codeT = tableToCode();
+		String input = readLine();
+		HashMap<Character, boolean[]> frequencies = convertStringToFrequencies();
+		Tree tree = convertFrequenciesToTree(frequencies);
+		HashMap<Character, boolean[]> table = convertTree(tree);
+		ArrayList<Boolean[]> codeString = convertStrToCode(input, table);
+		ArrayList<Boolean[]> codeTable = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
-		pw.print(codeToStr());
+		pw.print(convertCodeToString(concatArrayList(codeString, codeTable)));
 		pw.close();
 	}
-
 }
