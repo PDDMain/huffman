@@ -30,11 +30,11 @@ public class Archiver {
 		throw new NotImplementedException();
 	}
 
-	public static Tree convertArrayToTree(HashMap<Character, boolean[]> frequencies) {
+	public static Tree convertFrequenciesToTree(HashMap<Character, boolean[]> frequencies) {
 		throw new NotImplementedException();
 	}
 
-	public static HashMap<Character, boolean[]> convertFrequencies(Tree v) {
+	public static HashMap<Character, boolean[]> convertTree(Tree v) {
 		throw new NotImplementedException();
 	}
 
@@ -42,11 +42,11 @@ public class Archiver {
 		throw new NotImplementedException();
 	}
 
-	public static ArrayList<Boolean[]> serializeTable(bytes[] table) {
+	public static ArrayList<Boolean[]> serializeTable(HashMap<Character, boolean[]>) {
 		throw new NotImplementedException();
 	}
 
-	public static ArrayList<Boolean[]> contactArrayList(ArrayList<Boolean[]> a, ArrayList<Boolean[]> b) {
+	public static ArrayList<Boolean[]> concatArrayList(ArrayList<Boolean[]> a, ArrayList<Boolean[]> b) {
 		throw new NotImplementedException();
 	}
 
@@ -57,12 +57,12 @@ public class Archiver {
 	public static void main(String[] args) {
 		String input = readLine();
 		HashMap<Character, boolean[]> frequencies = convertStringToFrequencies();
-		Tree tree = convertArrayToTree(frequencies);
-		HashMap<Character, boolean[]> table = convertFrequencies(tree);
+		Tree tree = convertFrequenciesToTree(frequencies);
+		HashMap<Character, boolean[]> table = convertTree(tree);
 		ArrayList<Boolean[]> codeString = convertStrToCode(input, table);
 		ArrayList<Boolean[]> codeTable = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
-		pw.print(convertCodeToString(contactArrayList(codeString, codeTable)));
+		pw.print(convertCodeToString(concatArrayList(codeString, codeTable)));
 		pw.close();
 	}
 }
