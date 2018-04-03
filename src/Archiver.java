@@ -26,11 +26,11 @@ public class Archiver {
 		return s;
 	}
 
-	public static HashMap<Character, Integer> convertStrToFrequencies(String s) { // в частоты встречаемости
+	public static HashMap<Character, Integer> convertStringToFrequencies(String s) { // в частоты встречаемости
 		throw new NotImplementedException();
 	}
 
-	public static Vertex[] convertArrayToTree(HashMap hs) {
+	public static Tree convertArrayToTree(HashMap<Character, boolean[]> frequencies) {
 		throw new NotImplementedException();
 	}
 
@@ -46,20 +46,24 @@ public class Archiver {
 		throw new NotImplementedException();
 	}
 
-	public static String convertCodeToString(ArrayList<Boolean[]> codeString, ArrayList<Boolean[]> codeTable) {
-		String result /* = code1 + code2 */;
-		return result;
+	public static ArrayList<Boolean[]> contactArrayList(ArrayList<Boolean[]> codeString, ArrayList<Boolean[]> codeTable) {
+		throw new NotImplementedException();
+	}
+	
+	public static String convertCodeToString(ArrayList<Boolean[]> code) {
+		throw new NotImplementedException();
 	}
 
 	public static void main(String[] args) {
 		String input = readLine();
-		HashMap<Character, boolean[]> frequencies = convertStrToFrequencies();
+		HashMap<Character, boolean[]> frequencies = convertStringToFrequencies();
 		Tree tree = convertArrayToTree(frequencies);
 		HashMap<Character, boolean[]> table = convertTreeToTable(tree);
 		ArrayList<Boolean[]> codeString = convertStrToCode(input, table);
 		ArrayList<Boolean[]> codeTable = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
-		pw.print(convertCodeToStr(codeString, codeTable));
+		ArrayList<Boolean[]> code = contactArrayList(codeString, codeTable);
+		pw.print(convertCodeToString(code));
 		pw.close();
 	}
 }
