@@ -13,4 +13,6 @@ buildNumber.properties
 .classpath
 .project
 .settings/
+.idea/
+Haffman.iml
 bin/
