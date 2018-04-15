@@ -12,7 +12,7 @@ public class Archiver {
 		Node[] nodes;
 
 		public static int getLeavesCount() {
-			throw new NotImplementedException();
+			throw new UnsupportedOperationException();
 		}
 	}
 
@@ -26,32 +26,32 @@ public class Archiver {
 		return s;
 	}
 
-	public static HashMap<Character, Integer> convertStringToFrequencies(String s) { // в частоты встречаемости
-		throw new NotImplementedException();
+	public static HashMap<Character, Integer> convertStringToFrequencies(String s) { // пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		throw new UnsupportedOperationException();
 	}
 
 	public static Tree convertFrequenciesToTree(HashMap<Character, boolean[]> frequencies) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	public static HashMap<Character, boolean[]> convertTree(Tree v) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	public static ArrayList<Boolean[]> compressString(String s, HashMap<Character, boolean[]> table) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	public static ArrayList<Boolean[]> serializeTable(HashMap<Character, boolean[]>) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	public static ArrayList<Boolean[]> concatArrayList(ArrayList<Boolean[]> a, ArrayList<Boolean[]> b) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	public static String convertCodeToString(ArrayList<Boolean[]> code) {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException();
 	}
 
 	public static void main(String[] args) {
