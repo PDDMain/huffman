@@ -30,19 +30,19 @@ public class Archiver {
 		throw new UnsupportedOperationException();
 	}
 
-	public static Tree convertFrequenciesToTree(HashMap<Character, boolean[]> frequencies) {
+	public static Tree convertFrequenciesToTree(HashMap<Character, Boolean[]> frequencies) {
 		throw new UnsupportedOperationException();
 	}
 
-	public static HashMap<Character, boolean[]> convertTree(Tree v) {
+	public static HashMap<Character, Boolean[]> convertTree(Tree v) {
 		throw new UnsupportedOperationException();
 	}
 
-	public static ArrayList<Boolean[]> compressString(String s, HashMap<Character, boolean[]> table) {
+	public static ArrayList<Boolean[]> compressString(String s, HashMap<Character, Boolean[]> table) {
 		throw new UnsupportedOperationException();
 	}
 
-	public static ArrayList<Boolean[]> serializeTable(HashMap<Character, boolean[]>) {
+	public static ArrayList<Boolean[]> serializeTable(HashMap<Character, Boolean[]>) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -56,9 +56,9 @@ public class Archiver {
 
 	public static void main(String[] args) {
 		String input = readLine();
-		HashMap<Character, boolean[]> frequencies = convertStringToFrequencies();
+		HashMap<Character, Boolean[]> frequencies = convertStringToFrequencies();
 		Tree tree = convertFrequenciesToTree(frequencies);
-		HashMap<Character, boolean[]> table = convertTree(tree);
+		HashMap<Character, Boolean[]> table = convertTree(tree);
 		ArrayList<Boolean[]> codeString = convertStrToCode(input, table);
 		ArrayList<Boolean[]> codeTable = tableToCode(table);
 		PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
