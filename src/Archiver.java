@@ -26,7 +26,7 @@ public class Archiver {
 		return s;
 	}
 
-	public static HashMap<Character, Integer> convertStringToFrequencies(String s) { // � ������� �������������
+	public static HashMap<Character, Integer> convertStringToFrequencies(String s) { // частота встречаемости каждого из символов
 		throw new UnsupportedOperationException();
 	}
 
