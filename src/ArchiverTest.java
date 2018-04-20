@@ -5,24 +5,27 @@ import static org.junit.jupiter.api.Assertions.*;
 class ArchiverTest {
 
     @org.junit.jupiter.api.Test
-    void convertStringToFrequencies() {
+    void convertSimpleToFrequencies(){
         HashMap<Character, Integer> frequencies = new HashMap<Character, Integer>();
         frequencies.put('p', 5);
         frequencies.put('d', 2);
         assertEquals(frequencies, Archiver.convertStringToFrequencies("pppppdd"));
     }
 
-    void convertStringToFrequencies() {
+    @org.junit.jupiter.api.Test
+    void convertSingleSpaceStringToFrequencies() {
         HashMap<Character, Integer> frequencies = new HashMap<Character, Integer>();
         frequencies.put(' ', 1);
         assertEquals(frequencies, Archiver.convertStringToFrequencies(" "));
     }
 
-    void convertStringToFrequencies() {
+    @org.junit.jupiter.api.Test
+    void convertEmptyStringToFrequencies() {
         HashMap<Character, Integer> frequencies = new HashMap<Character, Integer>();
         assertEquals(frequencies, Archiver.convertStringToFrequencies(""));
     }
 
+    @org.junit.jupiter.api.Test
     void convertStringToFrequencies() {
         HashMap<Character, Integer> frequencies = new HashMap<Character, Integer>();
         frequencies.put('H', 1);
@@ -42,8 +45,14 @@ class ArchiverTest {
         frequencies.put('i', 2);
         frequencies.put('s', 1);
         frequencies.put('D', 1);
-        frequencies.put('e', 3);
         frequencies.put('.', 1);
         assertEquals(frequencies, Archiver.convertStringToFrequencies("Hello world! My name is Daniel."));
+    }
+
+    @org.junit.jupiter.api.Test
+    void compressString() {
+        HashMap<Character, Boolean[]> table = new HashMap<Character, Boolean[]>();
+
+        assertEquals(,Archiver.compressString("banana", table));
     }
 }
